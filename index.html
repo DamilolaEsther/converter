@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="converter.js" defer></script>
+    <title>Converter</title>
+    <style>
+        .moneybox {
+            border: 3px dotted green;
+            border-radius: 15px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .moneybox_result {
+            background-color: rgba(144,238,144,0.774);
+            border-radius: 0px 0px 15px 15px;
+            border-right: 3px dotted green;
+            border-left: 3px dotted green;
+            border-bottom: 3px dotted green;
+            padding: 10px;
+            width: 300px;
+            height: 25px;
+        }
+
+        button {
+            box-shadow: 5px 5px 5px green;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><button onclick="start()">Convert from </button> $ to &euro; or &euro; to $ ... an amount of<span id="amountToBeConverted"> </span></p>
+    </div>
+    <div class="moneybox">
+        <p>
+            <button onclick="convert(dollarsToEuros)">Dollars To Euros</button>
+            <button onclick="convert(eurosToDollars)">Euros To Dollars</button>
+        </p>
+    </div>
+    <div class="moneybox_result">
+        <div id="transaction">
+        </div>
+
+        <div id="totals">
+        </div>
+    </div>
+</body>
+</html>
